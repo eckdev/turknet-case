@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Card from "../../../components/Card";
 
-import useFetchTopAlbums from "../../utils/useFetchTopAlbums";
+import useFetchTopAlbums from "../../../utils/useFetchTopAlbums";
 import styles from "../../../styles/Artist.module.css";
-import useInfiniteScroll from "../../utils/useInfiniteScroll";
+import useInfiniteScroll from "../../../utils/useInfiniteScroll";
 interface Artists {
   artists: Artist[];
 }

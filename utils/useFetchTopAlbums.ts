@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-interface Artists {
-  artists: Artist[];
-}
 
  interface Image {
   "#text": string;
@@ -26,16 +23,6 @@ interface Artists {
   image: Image[];
 }
 
- interface Track {
-  name: string;
-  playcount: string;
-  listeners: string;
-  mbid: string;
-  url: string;
-  streamable: string;
-  artist: Artist;
-  image: Image[];
-}
  enum Size {
   Extralarge = "extralarge",
   Large = "large",

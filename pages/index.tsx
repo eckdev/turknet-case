@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useState } from "react";
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
-import useFetchTopArtists from "./utils/useFetchTopArtists";
+import useFetchTopArtists from "../utils/useFetchTopArtists";
 
-import useInfiniteScroll from "./utils/useInfiniteScroll";
+import useInfiniteScroll from "../utils/useInfiniteScroll";
 enum Size {
   Extralarge = "extralarge",
   Large = "large",

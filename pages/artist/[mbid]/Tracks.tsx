@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "../../../components/Card";
-import useFetchTopTracks from "../../utils/useFetchTopTracks";
-import useInfiniteScroll from "../../utils/useInfiniteScroll";
+import useFetchTopTracks from "../../../utils/useFetchTopTracks";
+import useInfiniteScroll from "../../../utils/useInfiniteScroll";
 import styles from "../../../styles/Artist.module.css";
 interface Artists {
   artists: Artist[];
