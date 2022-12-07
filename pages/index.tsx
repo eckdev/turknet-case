@@ -4,9 +4,31 @@ import { useState } from "react";
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
 import useFetchTopArtists from "./utils/useFetchTopArtists";
-import { Artists } from "./utils/interfaces";
-import useInfiniteScroll from "./utils/useInfiniteScroll";
 
+import useInfiniteScroll from "./utils/useInfiniteScroll";
+enum Size {
+  Extralarge = "extralarge",
+  Large = "large",
+  Medium = "medium",
+  Mega = "mega",
+  Small = "small",
+}
+interface Image {
+  "#text": string;
+  size: Size;
+}
+ interface Artist {
+  image: Image[];
+  listeners: string;
+  mbid: string;
+  name: string;
+  playcount: string;
+  streamable: string;
+  url: string;
+}
+interface Artists {
+  artists: Artist[];
+}
 const Home: React.FC<Artists> = (props) => {
   const [pageNum, setPageNum] = useState(1);
 

@@ -1,15 +1,53 @@
 import { GetServerSideProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Card from "../../../components/Card";
-import { Album, Track } from "../../utils/interfaces";
 import styles from "../../../styles/Artist.module.css";
-import { useState } from "react";
-import useFetchTopAlbums from "../../utils/useFetchTopAlbums";
-import useInfiniteScroll from "../../utils/useInfiniteScroll";
-import useFetchTopTracks from "../../utils/useFetchTopTracks";
 import Albums from "./Albums";
 import Tracks from "./Tracks";
+interface Artists {
+  artists: Artist[];
+}
 
+ interface Image {
+  "#text": string;
+  size: Size;
+}
+ interface Artist {
+  image: Image[];
+  listeners: string;
+  mbid: string;
+  name: string;
+  playcount: string;
+  streamable: string;
+  url: string;
+}
+
+ interface Album {
+  name: string;
+  playcount: string;
+  mbid: string;
+  url: string;
+  artist: Artist;
+  image: Image[];
+}
+
+ interface Track {
+  name: string;
+  playcount: string;
+  listeners: string;
+  mbid: string;
+  url: string;
+  streamable: string;
+  artist: Artist;
+  image: Image[];
+}
+ enum Size {
+  Extralarge = "extralarge",
+  Large = "large",
+  Medium = "medium",
+  Mega = "mega",
+  Small = "small",
+}
 interface IParams extends ParsedUrlQuery {
   mbid: string;
 }
