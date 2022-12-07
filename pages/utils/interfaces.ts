@@ -2,7 +2,7 @@ export interface Artists {
   artists: Artist[];
 }
 
-interface Image {
+export interface Image {
   "#text": string;
   size: Size;
 }
@@ -35,7 +35,7 @@ export interface Track {
   artist: Artist;
   image: Image[];
 }
-enum Size {
+export enum Size {
   Extralarge = "extralarge",
   Large = "large",
   Medium = "medium",
