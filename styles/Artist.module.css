@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+.albums,
+.tracks {
+  flex: 1;
+  max-height: 500px;
+  overflow: auto;
+}
+.mr24 {
+  margin-right: 24px;
+}
+.banner {
+  border: 2px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .albums {
+    margin-bottom: 8px;
+  }
+}
